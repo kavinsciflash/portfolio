@@ -3,8 +3,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         !empty($_POST['firstname'])
         && !empty($_POST['lastname'])
         && !empty($_POST['email'])
-&& !empty($_POST['subject'])
-&& !empty($_POST['message'])
+        && !empty($_POST['subject'])
+        && !empty($_POST['message'])
     ){
         $firstname = $_POST["firstname"];
         $lastname = $_POST["lastname"];
