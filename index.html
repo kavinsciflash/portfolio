@@ -608,7 +608,7 @@
 		</div>
 		<div class="choose animate-box">
 			<h2>Contact</h2>
-			<form method="POST" action="sendmail.php">
+			<form method="POST">
 				<div class="row form-group">
 					<div class="col-md-6">
 						<input type="text" id="fname" class="form-control" placeholder="Your firstname" name="firstname">
@@ -661,7 +661,25 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
 	</div>
-	
+
+
+		<script> 
+$(function(){ 
+	$("#form").submit(function(e){ 
+		e.preventDefault(); 
+		$.ajax({ 
+			url:'sendmail.php', 
+			type:'POST', 
+			data:$("#form").serialize(), 
+			success:function(e) { 
+				// when message has sent 
+				alert("email sent successfully")
+			} 
+		}); 
+	}); 
+}); 
+</script> 
+		
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
